@@ -1,0 +1,986 @@
+2018-05-02 10:58:36,262 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@5f2108b5: startup date [Wed May 02 10:58:36 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-02 10:58:37,277 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\..\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-02 10:58:37,527 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\..\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-02 10:58:37,684 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-46774-1525226317543-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-02 10:58:37,746 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-02 10:58:37,762 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-02 10:58:37,762 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-02 10:58:37,762 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-02 10:58:37,762 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-02 10:58:37,777 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-02 10:58:37,777 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-02 10:58:37,777 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-02 10:58:37,871 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@6853425f{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-02 10:58:37,934 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-02 10:58:37,934 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-02 10:58:37,934 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-46774-1525226317543-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-02 10:58:37,934 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-02 10:58:38,527 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-02 10:58:38,684 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-02 10:58:38,684 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-02 10:58:38,781 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-02 10:58:38,999 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-02 10:58:39,171 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-02 13:32:49,520 | WARN  | Failed to add Connection id=ID:Notebook-ssw-51288-1525235569336-1:1, clientId=111222333 due to {} | org.apache.activemq.broker.TransportConnection | ActiveMQ Transport: tcp:///127.0.0.1:51289@61616
+javax.jms.InvalidClientIDException: Broker: localhost - Client: 111222333 already connected from tcp://127.0.0.1:51282
+	at org.apache.activemq.broker.region.RegionBroker.addConnection(RegionBroker.java:247)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.jmx.ManagedRegionBroker.addConnection(ManagedRegionBroker.java:227)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.advisory.AdvisoryBroker.addConnection(AdvisoryBroker.java:119)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFilter.addConnection(BrokerFilter.java:99)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.TransportConnection.processAddConnection(TransportConnection.java:843)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.jmx.ManagedTransportConnection.processAddConnection(ManagedTransportConnection.java:77)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.command.ConnectionInfo.visit(ConnectionInfo.java:139)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.TransportConnection.service(TransportConnection.java:330)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.TransportConnection$1.onCommand(TransportConnection.java:194)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.MutexTransport.onCommand(MutexTransport.java:50)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.WireFormatNegotiator.onCommand(WireFormatNegotiator.java:125)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onCommand(AbstractInactivityMonitor.java:301)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.TransportSupport.doConsume(TransportSupport.java:83)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:233)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-02 13:32:51,528 | INFO  | Stopping tcp://127.0.0.1:51289 because Failed with SecurityException: Broker: localhost - Client: 111222333 already connected from tcp://127.0.0.1:51282 | org.apache.activemq.broker.TransportConnection | ActiveMQ BrokerService[localhost] Task-105
+2018-05-02 13:33:41,164 | WARN  | Transport Connection to: tcp://127.0.0.1:51291 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:51291@61616
+2018-05-02 13:33:42,625 | WARN  | Transport Connection to: tcp://127.0.0.1:51282 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:51282@61616
+2018-05-02 14:41:26,284 | WARN  | Transport Connection to: tcp://127.0.0.1:52128 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52128@61616
+2018-05-02 14:43:13,456 | WARN  | Transport Connection to: tcp://127.0.0.1:52130 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52130@61616
+2018-05-02 14:43:15,359 | WARN  | Transport Connection to: tcp://127.0.0.1:52140 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52140@61616
+2018-05-02 15:13:46,842 | WARN  | Transport Connection to: tcp://127.0.0.1:52801 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52801@61616
+2018-05-02 15:13:47,919 | WARN  | Transport Connection to: tcp://127.0.0.1:52723 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52723@61616
+2018-05-02 15:18:46,000 | WARN  | Transport Connection to: tcp://127.0.0.1:52836 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52836@61616
+2018-05-02 15:19:12,868 | WARN  | Transport Connection to: tcp://127.0.0.1:52841 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52841@61616
+2018-05-02 15:22:06,014 | WARN  | Transport Connection to: tcp://127.0.0.1:52860 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52860@61616
+2018-05-02 15:22:08,971 | WARN  | Transport Connection to: tcp://127.0.0.1:52858 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52858@61616
+2018-05-02 15:22:09,619 | WARN  | Transport Connection to: tcp://127.0.0.1:52852 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52852@61616
+2018-05-02 15:22:10,223 | WARN  | Transport Connection to: tcp://127.0.0.1:52856 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:52856@61616
+2018-05-02 16:47:36,280 | WARN  | Transport Connection to: tcp://127.0.0.1:55297 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55297@61616
+2018-05-02 16:48:11,605 | WARN  | Transport Connection to: tcp://127.0.0.1:55295 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55295@61616
+2018-05-02 16:48:12,485 | WARN  | Transport Connection to: tcp://127.0.0.1:55305 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55305@61616
+2018-05-02 16:48:26,225 | WARN  | Transport Connection to: tcp://127.0.0.1:55312 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55312@61616
+2018-05-02 16:48:32,522 | WARN  | Transport Connection to: tcp://127.0.0.1:55315 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55315@61616
+2018-05-02 16:49:41,525 | WARN  | Transport Connection to: tcp://127.0.0.1:55318 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55318@61616
+2018-05-02 16:49:57,232 | WARN  | Transport Connection to: tcp://127.0.0.1:55322 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55322@61616
+2018-05-02 16:49:59,050 | WARN  | Transport Connection to: tcp://127.0.0.1:55326 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55326@61616
+2018-05-02 16:52:06,401 | WARN  | Transport Connection to: tcp://127.0.0.1:55338 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55338@61616
+2018-05-02 16:52:07,031 | WARN  | Transport Connection to: tcp://127.0.0.1:55342 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55342@61616
+2018-05-02 16:52:07,725 | WARN  | Transport Connection to: tcp://127.0.0.1:55344 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:55344@61616
+2018-05-02 17:14:34,376 | INFO  | Connector vm://localhost started | org.apache.activemq.broker.TransportConnector | qtp1783966110-42
+2018-05-02 17:15:31,756 | WARN  | Transport Connection to: tcp://127.0.0.1:56032 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56032@61616
+2018-05-02 17:15:32,659 | WARN  | Transport Connection to: tcp://127.0.0.1:56038 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56038@61616
+2018-05-02 17:15:33,429 | WARN  | Transport Connection to: tcp://127.0.0.1:56028 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:56028@61616
+2018-05-03 10:05:55,480 | WARN  | Transport Connection to: tcp://127.0.0.1:5891 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:5891@61616
+2018-05-03 10:05:56,488 | WARN  | Transport Connection to: tcp://127.0.0.1:5889 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:5889@61616
+2018-05-03 11:01:06,541 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-46774-1525226317543-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-23
+2018-05-03 11:01:06,571 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2018-05-03 11:01:06,582 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2018-05-03 11:01:06,584 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-05-03 11:01:06,595 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: stomp://0.0.0.0:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-05-03 11:01:06,595 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2018-05-03 11:01:06,614 | INFO  | Could not accept connection during shutdown  : {} | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: stomp://0.0.0.0:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)[:1.8.0_151]
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)[:1.8.0_151]
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)[:1.8.0_151]
+	at org.apache.activemq.transport.tcp.TcpTransportServer$1.run(TcpTransportServer.java:479)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 11:01:06,607 | INFO  | Could not accept connection during shutdown  : {} | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: amqp://0.0.0.0:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)[:1.8.0_151]
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)[:1.8.0_151]
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)[:1.8.0_151]
+	at org.apache.activemq.transport.tcp.TcpTransportServer$1.run(TcpTransportServer.java:479)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 11:01:06,620 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: mqtt://0.0.0.0:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-05-03 11:01:06,619 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2018-05-03 11:01:06,655 | INFO  | Could not accept connection during shutdown  : {} | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: mqtt://0.0.0.0:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)[:1.8.0_151]
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)[:1.8.0_151]
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)[:1.8.0_151]
+	at org.apache.activemq.transport.tcp.TcpTransportServer$1.run(TcpTransportServer.java:479)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 11:01:06,751 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2018-05-03 11:01:06,769 | INFO  | Connector vm://localhost stopped | org.apache.activemq.broker.TransportConnector | Thread-23
+2018-05-03 11:01:06,797 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\..\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-23
+2018-05-03 11:01:06,804 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2018-05-03 11:01:06,807 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2018-05-03 11:01:06,814 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-23
+2018-05-03 11:01:06,896 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-46774-1525226317543-0:1) uptime 1 day | org.apache.activemq.broker.BrokerService | Thread-23
+2018-05-03 11:01:06,903 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-46774-1525226317543-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-23
+2018-05-03 11:01:06,910 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@5f2108b5: startup date [Wed May 02 10:58:36 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-23
+2018-05-03 11:01:07,013 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-23
+2018-05-03 13:18:20,623 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:18:20 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:18:21,877 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:18:22,008 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 13:18:22,060 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 13:18:22,261 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15517-1525321102074-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:18:22,370 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:18:22,373 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:18:22,380 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:18:22,382 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:18:22,390 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:18:22,393 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:18:22,405 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:18:22,410 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:18:22,528 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 13:18:22,604 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 13:18:22,606 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:18:22,608 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15517-1525321102074-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:18:22,610 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:18:23,328 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 13:18:23,636 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:18:23,637 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:18:23,758 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 13:18:24,066 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 13:18:24,283 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 13:21:25,362 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:21:25 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:21:26,305 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:21:26,321 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 13:27:57,691 | WARN  | Transport Connection to: tcp://127.0.0.1:15686 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15686@61616
+2018-05-03 13:27:58,669 | WARN  | Transport Connection to: tcp://127.0.0.1:15688 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15688@61616
+2018-05-03 13:28:47,532 | WARN  | Transport Connection to: tcp://127.0.0.1:15692 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15692@61616
+2018-05-03 13:31:11,563 | WARN  | Transport Connection to: tcp://127.0.0.1:15703 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15703@61616
+2018-05-03 13:31:13,194 | WARN  | Transport Connection to: tcp://127.0.0.1:15701 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15701@61616
+2018-05-03 13:31:43,888 | WARN  | Transport Connection to: tcp://127.0.0.1:15707 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15707@61616
+2018-05-03 13:31:56,505 | WARN  | Transport Connection to: tcp://127.0.0.1:15711 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15711@61616
+2018-05-03 13:32:42,998 | WARN  | Transport Connection to: tcp://127.0.0.1:15715 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15715@61616
+2018-05-03 13:33:05,078 | WARN  | Transport Connection to: tcp://127.0.0.1:15726 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15726@61616
+2018-05-03 13:33:25,656 | WARN  | Transport Connection to: tcp://127.0.0.1:15728 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15728@61616
+2018-05-03 13:33:27,510 | WARN  | Transport Connection to: tcp://127.0.0.1:15713 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15713@61616
+2018-05-03 13:33:54,307 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15517-1525321102074-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 13:33:54,316 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:33:54,321 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:33:54,323 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:33:54,325 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:33:54,330 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:33:54,334 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-27
+2018-05-03 13:33:54,336 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 13:33:54,339 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 13:33:54,340 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 13:33:54,361 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15517-1525321102074-0:1) uptime 15 minutes | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 13:33:54,362 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15517-1525321102074-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 13:33:54,364 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:18:20 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-27
+2018-05-03 13:33:54,372 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-27
+2018-05-03 13:33:56,504 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 13:33:56,540 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 13:33:56,741 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15740-1525322036552-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:33:56,829 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:33:56,832 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:33:56,838 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:33:56,840 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:33:56,845 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:33:56,848 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:33:56,854 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:33:56,855 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:33:56,981 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1458ed9c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 13:33:57,064 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 13:33:57,066 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:33:57,068 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15740-1525322036552-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:33:57,069 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:33:57,873 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 13:33:58,012 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:33:58,013 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:33:58,115 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 13:33:58,354 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 13:33:58,535 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 13:34:30,010 | WARN  | Transport Connection to: tcp://127.0.0.1:15739 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15739@61616
+2018-05-03 13:34:32,808 | WARN  | Transport Connection to: tcp://127.0.0.1:15738 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15738@61616
+2018-05-03 13:35:55,942 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15740-1525322036552-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-29
+2018-05-03 13:35:55,952 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-29
+2018-05-03 13:35:55,956 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-29
+2018-05-03 13:35:55,959 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-29
+2018-05-03 13:35:55,961 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-29
+2018-05-03 13:35:55,973 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-29
+2018-05-03 13:35:55,981 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-29
+2018-05-03 13:35:55,984 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-29
+2018-05-03 13:35:55,986 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-29
+2018-05-03 13:35:55,987 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-29
+2018-05-03 13:35:56,010 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15740-1525322036552-0:1) uptime 14 minutes | org.apache.activemq.broker.BrokerService | Thread-29
+2018-05-03 13:35:56,012 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15740-1525322036552-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-29
+2018-05-03 13:35:56,013 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:21:25 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-29
+2018-05-03 13:35:56,027 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-29
+2018-05-03 13:47:49,175 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:47:49 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:47:50,230 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:47:50,304 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 13:47:50,345 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 13:47:50,551 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15848-1525322870357-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:47:50,640 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:47:50,642 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:47:50,649 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:47:50,651 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:47:50,657 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:47:50,660 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:47:50,667 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:47:50,668 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:47:50,760 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 13:47:50,817 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 13:47:50,819 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:47:50,820 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15848-1525322870357-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:47:50,822 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:47:51,444 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 13:47:51,709 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:47:51,710 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:47:51,802 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 13:47:52,020 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 13:47:52,232 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 13:47:55,171 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:47:55 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:47:56,198 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:47:56,211 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 13:48:20,067 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15848-1525322870357-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 13:48:20,069 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:48:20,071 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:48:20,072 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:48:20,074 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:48:20,081 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 13:48:20,085 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-27
+2018-05-03 13:48:20,086 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 13:48:20,087 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 13:48:20,089 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 13:48:20,116 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15848-1525322870357-0:1) uptime 29.914 seconds | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 13:48:20,118 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15848-1525322870357-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 13:48:20,119 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:47:49 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-27
+2018-05-03 13:48:20,130 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-27
+2018-05-03 13:48:53,307 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:48:53 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:48:54,289 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:48:54,368 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 13:48:54,418 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 13:48:54,606 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15867-1525322934436-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:48:54,693 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:48:54,695 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:48:54,700 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:48:54,702 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:48:54,707 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:48:54,710 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:48:54,721 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:48:54,722 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:48:54,820 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 13:48:54,889 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 13:48:54,890 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:48:54,892 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15867-1525322934436-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:48:54,894 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:48:55,534 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 13:48:55,861 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:48:55,863 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:48:55,985 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 13:48:56,225 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 13:48:56,444 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 13:49:07,472 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:49:07 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:49:08,486 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:49:08,499 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 13:49:37,195 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15867-1525322934436-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,212 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,214 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,217 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,219 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,226 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,232 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,233 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,234 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,236 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,257 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15867-1525322934436-0:1) uptime 42.986 seconds | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,259 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15867-1525322934436-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,260 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:48:53 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 13:49:37,270 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 13:49:38,573 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 13:49:38,612 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 13:49:38,829 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15890-1525322978626-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:49:38,926 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:49:38,929 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:49:38,936 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:49:38,939 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:49:38,946 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:49:38,949 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:49:38,956 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:49:38,959 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:49:39,055 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1458ed9c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 13:49:39,116 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 13:49:39,117 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:49:39,120 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15890-1525322978626-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:49:39,121 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:49:40,007 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 13:49:40,153 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:49:40,154 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:49:40,250 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 13:49:40,473 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 13:49:40,659 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 13:51:00,522 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15890-1525322978626-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,534 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,536 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,537 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,539 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,548 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,555 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,556 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,557 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,558 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,588 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15890-1525322978626-0:1) uptime 1 minute | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,589 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15890-1525322978626-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,591 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:49:07 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 13:51:00,602 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 13:51:06,676 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:51:06 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:51:07,664 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:51:07,738 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 13:51:07,778 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 13:51:07,978 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15913-1525323067790-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:51:08,079 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:51:08,081 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:51:08,087 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:51:08,090 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:51:08,099 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:51:08,101 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:51:08,112 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 13:51:08,114 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:51:08,258 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 13:51:08,362 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 13:51:08,376 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 13:51:08,393 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15913-1525323067790-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:51:08,401 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:51:09,608 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:51:09 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 13:51:09,828 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 13:51:10,601 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:51:10,604 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 13:51:10,700 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 13:51:11,069 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 13:51:11,438 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 13:51:11,800 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 13:51:11,813 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 13:54:25,216 | WARN  | Transport Connection to: tcp://127.0.0.1:15914 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15914@61616
+2018-05-03 13:54:26,258 | WARN  | Transport Connection to: tcp://127.0.0.1:15915 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:15915@61616
+2018-05-03 13:54:35,678 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15913-1525323067790-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,683 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,686 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,689 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,692 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,699 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,705 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,708 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,710 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,712 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,740 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15913-1525323067790-0:1) uptime 3 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,743 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-15913-1525323067790-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,744 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 13:51:06 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 13:54:35,756 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 14:16:27,364 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:16:27 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:16:27,685 | ERROR | Failed to load: class path resource [activemq.xml], reason: Line 104 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 104; columnNumber: 76; "wireFormat.maxFrameSize" 엔티티에 대한 참조는 ';' 구분자로 끝나야 합니다. | org.apache.activemq.xbean.XBeanBrokerFactory | main
+org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 104 in XML document from class path resource [activemq.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 104; columnNumber: 76; "wireFormat.maxFrameSize" 엔티티에 대한 참조는 ';' 구분자로 끝나야 합니다.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:111)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.loadBeanDefinitions(ResourceXmlApplicationContext.java:104)[xbean-spring-4.2.jar:4.2]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:614)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:515)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-4.2.jar:4.2]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.15.3.jar:5.15.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_151]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.15.3]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.15.3]
+2018-05-03 14:17:15,969 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:17:15 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:17:16,983 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:17:17,065 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 14:17:17,125 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker-1\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 14:17:17,310 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16136-1525324637186-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:17:17,394 | INFO  | Listening for connections at: tcp://Notebook-ssw:61516?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:17:17,396 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:17:17,398 | INFO  | Establishing network connection from vm://broker-1 to failover:(tcp://0.0.0.0:61816,tcp://0.0.0.0:61826) | org.apache.activemq.network.DiscoveryNetworkConnector | main
+2018-05-03 14:17:17,417 | INFO  | Connector vm://broker-1 started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:17:17,431 | INFO  | Network Connector DiscoveryNetworkConnector:amq3-nc:BrokerService[broker-1] started | org.apache.activemq.network.NetworkConnector | main
+2018-05-03 14:17:17,432 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16136-1525324637186-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:17:17,434 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:17:18,340 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 14:17:18,480 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8162/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:17:18,481 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8162/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:17:18,583 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 14:17:18,783 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 14:17:18,975 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 14:17:36,014 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:17:36 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:17:36,983 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:17:36,996 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 14:17:42,695 | WARN  | Failed to connect to [tcp://0.0.0.0:61816, tcp://0.0.0.0:61826] after: 10 attempt(s) continuing to retry. | org.apache.activemq.transport.failover.FailoverTransport | ActiveMQ Task-1
+2018-05-03 14:22:08,686 | WARN  | Failed to connect to [tcp://0.0.0.0:61816, tcp://0.0.0.0:61826] after: 20 attempt(s) continuing to retry. | org.apache.activemq.transport.failover.FailoverTransport | ActiveMQ Task-1
+2018-05-03 14:27:28,761 | WARN  | Failed to connect to [tcp://0.0.0.0:61816, tcp://0.0.0.0:61826] after: 30 attempt(s) continuing to retry. | org.apache.activemq.transport.failover.FailoverTransport | ActiveMQ Task-1
+2018-05-03 14:28:52,524 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16136-1525324637186-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,529 | WARN  | Transport Connection to: vm://broker-1#0 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://broker-1#0) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,531 | WARN  | Transport Connection to: vm://broker-1#2 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://broker-1#2) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,533 | INFO  | Connector vm://broker-1 stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,534 | INFO  | broker-1 bridge to Unknown stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,535 | INFO  | Network Connector DiscoveryNetworkConnector:amq3-nc:BrokerService[broker-1] stopped | org.apache.activemq.network.NetworkConnector | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,537 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,541 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker-1\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,542 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,543 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,544 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,575 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16136-1525324637186-0:1) uptime 11 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,577 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16136-1525324637186-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,579 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:17:15 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 14:28:52,595 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 14:30:54,907 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:30:54 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:30:56,080 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:30:56,164 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 14:30:56,230 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker-1\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 14:30:56,456 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16238-1525325456254-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:30:56,609 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:30:56,614 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:30:56,623 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16238-1525325456254-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:30:56,626 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:30:56,770 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:30:56 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:30:58,583 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 14:30:58,887 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8162/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:30:58,889 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8162/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:30:59,043 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:30:59,039 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 14:30:59,061 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 14:30:59,357 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 14:30:59,600 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 14:44:26,011 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:44:26 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:44:27,026 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:44:27,039 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 14:46:24,556 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16238-1525325456254-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-18
+2018-05-03 14:46:24,561 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-18
+2018-05-03 14:46:24,566 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker-1\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-18
+2018-05-03 14:46:24,567 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-18
+2018-05-03 14:46:24,569 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-18
+2018-05-03 14:46:24,571 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-18
+2018-05-03 14:46:24,592 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16238-1525325456254-0:1) uptime 15 minutes | org.apache.activemq.broker.BrokerService | Thread-18
+2018-05-03 14:46:24,594 | INFO  | Apache ActiveMQ 5.15.3 (broker-1, ID:Notebook-ssw-16238-1525325456254-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-18
+2018-05-03 14:46:24,597 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:30:54 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-18
+2018-05-03 14:46:24,616 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-18
+2018-05-03 14:46:29,311 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 14:46:29,350 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker-2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 14:46:29,541 | INFO  | Apache ActiveMQ 5.15.3 (broker-2, ID:Notebook-ssw-16322-1525326389363-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:46:29,645 | INFO  | Listening for connections at: tcp://Notebook-ssw:61826?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:46:29,648 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:46:29,650 | INFO  | Apache ActiveMQ 5.15.3 (broker-2, ID:Notebook-ssw-16322-1525326389363-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:46:29,652 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:46:29,999 | INFO  | Apache ActiveMQ 5.15.3 (broker-2, ID:Notebook-ssw-16322-1525326389363-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,004 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,016 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker-2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,019 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,021 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,023 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,059 | INFO  | Apache ActiveMQ 5.15.3 (broker-2, ID:Notebook-ssw-16322-1525326389363-0:1) uptime 15 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,063 | INFO  | Apache ActiveMQ 5.15.3 (broker-2, ID:Notebook-ssw-16322-1525326389363-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:46:30,469 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 14:46:30,757 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8961/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:46:30,758 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8961/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:46:30,867 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 14:46:31,139 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 14:46:31,278 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 14:46:31,384 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:30:56 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 14:46:31,397 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 14:46:47,457 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:46:47 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:46:48,459 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:46:48,542 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 14:46:48,581 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 14:46:48,769 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16328-1525326408594-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:46:48,857 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:46:48,859 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:46:48,866 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:46:48,868 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:46:48,875 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:46:48,878 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:46:48,884 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:46:48,886 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:46:48,976 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 14:46:49,036 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 14:46:49,037 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:46:49,039 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16328-1525326408594-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:46:49,041 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:46:49,640 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 14:46:49,897 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:46:49,898 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:46:49,985 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 14:46:50,210 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 14:46:50,429 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 14:46:59,027 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:46:59 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:47:00,050 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:47:00,067 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 14:47:14,790 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:47:14 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:47:15,788 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:47:15,801 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 14:48:14,668 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16328-1525326408594-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 14:48:14,670 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 14:48:14,672 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 14:48:14,673 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 14:48:14,675 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 14:48:14,681 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 14:48:14,687 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-27
+2018-05-03 14:48:14,688 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 14:48:14,689 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 14:48:14,691 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 14:48:14,733 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16328-1525326408594-0:1) uptime 1 minute | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 14:48:14,734 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16328-1525326408594-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 14:48:14,736 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:46:47 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-27
+2018-05-03 14:48:14,750 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-27
+2018-05-03 14:48:15,877 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 14:48:15,924 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 14:48:16,153 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16339-1525326495940-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:48:16,249 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:16,251 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:16,257 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:16,261 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:16,267 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:16,270 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:16,284 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:16,287 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:16,388 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1458ed9c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 14:48:16,453 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 14:48:16,456 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:16,460 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16339-1525326495940-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:48:16,464 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:48:16,975 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16339-1525326495940-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:48:16,993 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,119 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,150 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,165 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,166 | INFO  | socketQueue interrupted - stopping | org.apache.activemq.transport.tcp.TcpTransportServer | ActiveMQ Transport Server Thread Handler: mqtt://0.0.0.0:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+2018-05-03 14:48:17,171 | INFO  | Could not accept connection during shutdown  : {} | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport Server Thread Handler: mqtt://0.0.0.0:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)[:1.8.0_151]
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)[:1.8.0_151]
+	at java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)[:1.8.0_151]
+	at org.apache.activemq.transport.tcp.TcpTransportServer$1.run(TcpTransportServer.java:479)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 14:48:17,222 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,252 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,253 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,255 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,257 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,355 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 14:48:17,374 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16339-1525326495940-0:1) uptime 1 minute | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,375 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16339-1525326495940-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:48:17,537 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:48:17,537 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:48:17,626 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 14:48:17,873 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 14:48:18,112 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 14:48:18,247 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:47:14 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 14:48:18,263 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 14:48:41,553 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:48:41 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:48:42,583 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:48:42,677 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 14:48:42,734 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 14:48:42,952 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16356-1525326522747-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:48:43,045 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:43,047 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:43,055 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:43,059 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:43,064 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:43,066 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:43,077 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:48:43,079 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:43,190 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 14:48:43,255 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 14:48:43,257 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:48:43,258 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16356-1525326522747-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:48:43,260 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:48:43,917 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 14:48:44,186 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:48:44,187 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:48:44,289 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 14:48:44,521 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 14:48:44,743 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 14:51:00,438 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16356-1525326522747-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,440 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,442 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,444 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,446 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,453 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,459 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,461 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,462 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,465 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,492 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16356-1525326522747-0:1) uptime 2 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,493 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16356-1525326522747-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,495 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:48:41 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 14:51:00,508 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 14:58:15,114 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:58:15 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:58:16,128 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:58:16,256 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 14:58:16,310 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 14:58:16,496 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16852-1525327096323-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:58:16,616 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:58:16,619 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:58:16,632 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:58:16,634 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:58:16,640 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:58:16,647 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:58:16,656 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 14:58:16,658 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:58:16,772 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 14:58:16,841 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 14:58:16,843 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 14:58:16,845 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16852-1525327096323-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:58:16,847 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:58:17,531 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 14:58:17,813 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:58:17,814 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 14:58:17,913 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 14:58:18,189 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 14:58:18,430 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 14:58:40,809 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:58:40 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:58:41,966 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:58:41,981 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 14:58:47,517 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:58:47 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 14:58:48,841 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 14:58:48,858 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 14:58:59,030 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16852-1525327096323-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,033 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,034 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,036 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,039 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,049 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,054 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,055 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,056 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,058 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,087 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16852-1525327096323-0:1) uptime 42.980 seconds | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,089 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16852-1525327096323-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,091 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 14:58:15 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 14:58:59,107 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 15:00:46,593 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:00:46 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:00:47,600 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:00:47,711 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 15:00:47,763 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:00:48,005 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16933-1525327247781-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:00:48,096 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:00:48,098 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:00:48,103 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:00:48,105 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:00:48,113 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:00:48,115 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:00:48,126 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:00:48,129 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:00:48,234 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 15:00:48,309 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 15:00:48,311 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:00:48,312 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16933-1525327247781-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:00:48,314 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:00:48,902 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 15:00:49,168 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:00:49,169 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:00:49,290 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 15:00:49,515 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 15:00:49,718 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 15:00:57,386 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16933-1525327247781-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,395 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,400 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,404 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,407 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,417 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,424 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,425 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,428 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,429 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,457 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16933-1525327247781-0:1) uptime 9.875 seconds | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,459 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16933-1525327247781-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,461 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:00:46 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 15:00:57,470 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 15:01:03,167 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:01:03 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:01:04,174 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:01:04,255 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 15:01:04,303 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:01:04,494 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16943-1525327264317-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:01:04,586 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:01:04,588 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:01:04,594 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:01:04,596 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:01:04,601 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:01:04,603 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:01:04,609 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:01:04,614 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:01:04,716 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 15:01:04,782 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 15:01:04,784 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:01:04,785 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16943-1525327264317-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:01:04,787 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:01:05,394 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 15:01:05,664 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:01:05,665 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:01:05,770 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 15:01:05,995 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 15:01:06,229 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 15:01:10,784 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:01:10 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:01:11,742 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:01:11,754 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 15:03:23,949 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16943-1525327264317-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,951 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,953 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,954 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,956 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,962 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,966 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,969 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,973 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 15:03:23,978 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 15:03:24,007 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16943-1525327264317-0:1) uptime 2 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 15:03:24,010 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16943-1525327264317-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 15:03:24,013 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:01:03 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 15:03:24,025 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 15:03:33,168 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:03:33 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:03:34,219 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:03:34,299 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 15:03:34,347 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:03:34,532 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16954-1525327414362-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:03:34,627 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:03:34,630 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:03:34,636 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:03:34,638 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:03:34,643 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:03:34,648 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:03:34,660 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:03:34,662 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:03:34,764 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 15:03:34,828 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 15:03:34,830 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:03:34,832 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16954-1525327414362-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:03:34,834 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:03:35,464 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 15:03:35,729 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:03:35,731 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:03:35,829 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 15:03:36,075 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 15:03:36,300 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 15:04:21,416 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:04:21 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:04:22,386 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:04:22,399 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 15:04:26,917 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:04:26 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:04:27,921 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:04:27,934 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 15:05:52,720 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:05:52 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:05:53,735 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:05:53,747 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 15:10:34,348 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16954-1525327414362-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 15:10:34,357 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:34,361 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:34,364 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:34,367 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:34,377 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:34,382 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-27
+2018-05-03 15:10:34,383 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 15:10:34,384 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 15:10:34,388 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 15:10:34,413 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16954-1525327414362-0:1) uptime 7 minutes | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 15:10:34,414 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-16954-1525327414362-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 15:10:34,416 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:03:33 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-27
+2018-05-03 15:10:34,427 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-27
+2018-05-03 15:10:38,889 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:10:38 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:10:39,880 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:10:40,000 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 15:10:40,051 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:10:40,279 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17001-1525327840068-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:10:40,371 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:10:40,373 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:10:40,378 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:10:40,380 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:10:40,388 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:10:40,392 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:10:40,400 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:10:40,402 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:10:40,515 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 15:10:40,587 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 15:10:40,589 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:10:40,590 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17001-1525327840068-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:10:40,592 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:10:41,188 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 15:10:41,477 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:10:41,478 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:10:41,589 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 15:10:41,831 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 15:10:42,053 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 15:10:42,278 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17001-1525327840068-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 15:10:42,281 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:42,283 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:42,285 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:42,286 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:42,295 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 15:10:42,301 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-27
+2018-05-03 15:10:42,303 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 15:10:42,304 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 15:10:42,307 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 15:10:42,338 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17001-1525327840068-0:1) uptime 2.477 seconds | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 15:10:42,339 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17001-1525327840068-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 15:10:42,340 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:10:38 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-27
+2018-05-03 15:10:42,350 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-27
+2018-05-03 16:21:49,640 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:21:49 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 16:21:50,860 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:21:50,971 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 16:21:51,012 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 16:21:51,205 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17609-1525332111027-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:21:51,309 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:21:51,311 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:21:51,320 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:21:51,322 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:21:51,335 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:21:51,337 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:21:51,342 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:21:51,345 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:21:51,461 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1c93f6e1{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 16:21:51,536 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 16:21:51,537 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:21:51,538 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17609-1525332111027-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:21:51,541 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:21:52,235 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 16:21:52,541 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:21:52,541 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:21:52,646 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 16:21:52,927 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 16:21:53,184 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 16:22:30,448 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:22:30 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 16:22:31,554 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:22:31,575 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 16:44:24,935 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:44:24 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 16:44:26,095 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:44:26,205 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 16:44:26,254 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 16:44:26,478 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17784-1525333466269-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:44:26,577 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:44:26,580 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:44:26,588 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:44:26,589 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:44:26,598 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:44:26,601 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:44:26,609 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:44:26,615 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:44:26,759 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1458ed9c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 16:44:26,837 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 16:44:26,838 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:44:26,839 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17784-1525333466269-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:44:26,841 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:44:27,723 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 16:44:27,895 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:44:27,896 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:44:28,007 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 16:44:28,266 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 16:44:28,456 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 16:44:35,230 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:44:35 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 16:44:36,368 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:44:36,380 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 16:45:23,319 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:45:23 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 16:45:24,428 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:45:24,445 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 16:55:14,980 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17784-1525333466269-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,982 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,983 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,984 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,986 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,992 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,997 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,998 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 16:55:14,999 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 16:55:15,001 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 16:55:15,032 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17784-1525333466269-0:1) uptime 10 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 16:55:15,034 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-17784-1525333466269-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 16:55:15,037 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:44:24 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 16:55:15,062 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 16:55:16,613 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 16:55:16,671 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 16:55:16,889 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-18010-1525334116687-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:55:16,987 | INFO  | Listening for connections at: tcp://Notebook-ssw:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:55:16,989 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:55:16,997 | INFO  | Listening for connections at: amqp://Notebook-ssw:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:55:16,999 | INFO  | Connector amqp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:55:17,005 | INFO  | Listening for connections at: stomp://Notebook-ssw:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:55:17,007 | INFO  | Connector stomp started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:55:17,013 | INFO  | Listening for connections at: mqtt://Notebook-ssw:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:55:17,015 | INFO  | Connector mqtt started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:55:17,120 | WARN  | ServletContext@o.e.j.s.ServletContextHandler@1458ed9c{/,null,STARTING} has uncovered http methods for path: / | org.eclipse.jetty.security.SecurityHandler | main
+2018-05-03 16:55:17,189 | INFO  | Listening for connections at ws://Notebook-ssw:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.ws.WSTransportServer | main
+2018-05-03 16:55:17,190 | INFO  | Connector ws started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:55:17,194 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-18010-1525334116687-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:55:17,196 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:55:18,133 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 16:55:18,314 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8161/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:55:18,315 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:55:18,399 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 16:55:18,727 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 16:55:19,028 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 16:55:22,501 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-18010-1525334116687-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 16:55:22,504 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 16:55:22,506 | INFO  | Connector amqp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 16:55:22,507 | INFO  | Connector stomp stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 16:55:22,508 | INFO  | Connector mqtt stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 16:55:22,517 | INFO  | Connector ws stopped | org.apache.activemq.broker.TransportConnector | Thread-27
+2018-05-03 16:55:22,525 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\localhost\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-27
+2018-05-03 16:55:22,528 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 16:55:22,531 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 16:55:22,533 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-27
+2018-05-03 16:55:22,570 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-18010-1525334116687-0:1) uptime 10 minutes | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 16:55:22,571 | INFO  | Apache ActiveMQ 5.15.3 (localhost, ID:Notebook-ssw-18010-1525334116687-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-27
+2018-05-03 16:55:22,573 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:44:35 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-27
+2018-05-03 16:55:22,587 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-27
+2018-05-03 16:56:12,555 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:56:12 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 16:56:13,653 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:56:13,915 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 16:56:13,976 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker1\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 16:56:14,187 | INFO  | Apache ActiveMQ 5.15.3 (broker1, ID:Notebook-ssw-18022-1525334173989-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:56:14,289 | INFO  | Listening for connections at: tcp://Notebook-ssw:61816?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 16:56:14,291 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 16:56:14,293 | INFO  | Apache ActiveMQ 5.15.3 (broker1, ID:Notebook-ssw-18022-1525334173989-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:56:14,296 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:56:15,389 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 16:56:15,588 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8861/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:56:15,589 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8861/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 16:56:15,714 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 16:56:16,038 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 16:56:16,212 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 16:56:19,871 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:56:19 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 16:56:21,014 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 16:56:21,028 | INFO  | Database C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\kahadb\lock is locked by another server. This broker is now in slave mode waiting a lock to be acquired | org.apache.activemq.store.SharedFileLocker | main
+2018-05-03 16:56:27,512 | INFO  | Connector vm://broker1 started | org.apache.activemq.broker.TransportConnector | ActiveMQ Transport: tcp:///192.168.0.113:18030@61816
+2018-05-03 16:56:27,534 | INFO  | Started responder end of duplex bridge amq3-nc@ID:Notebook-ssw-18029-1525334187016-0:1 | org.apache.activemq.broker.TransportConnection | ActiveMQ Transport: tcp:///192.168.0.113:18030@61816
+2018-05-03 16:56:27,583 | INFO  | Network connection between vm://broker1#0 and tcp:///192.168.0.113:18030@61816 (broker2) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp:///192.168.0.113:18030@61816, localBroker= vm://broker1#0
+2018-05-03 17:01:29,684 | INFO  | Apache ActiveMQ 5.15.3 (broker1, ID:Notebook-ssw-18022-1525334173989-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-18
+2018-05-03 17:01:29,695 | WARN  | Transport Connection to: vm://broker1#0 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://broker1#0) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ BrokerService[broker1] Task-2
+2018-05-03 17:01:29,697 | WARN  | Transport Connection to: vm://broker1#2 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://broker1#2) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ BrokerService[broker1] Task-2
+2018-05-03 17:01:29,701 | INFO  | Connector vm://broker1 stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ BrokerService[broker1] Task-2
+2018-05-03 17:01:29,705 | INFO  | broker1 bridge to broker2 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ BrokerService[broker1] Task-2
+2018-05-03 17:01:29,707 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-18
+2018-05-03 17:01:29,714 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker1\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-18
+2018-05-03 17:01:29,716 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-18
+2018-05-03 17:01:29,718 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-18
+2018-05-03 17:01:29,720 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-18
+2018-05-03 17:01:29,750 | INFO  | Apache ActiveMQ 5.15.3 (broker1, ID:Notebook-ssw-18022-1525334173989-0:1) uptime 5 minutes | org.apache.activemq.broker.BrokerService | Thread-18
+2018-05-03 17:01:29,752 | INFO  | Apache ActiveMQ 5.15.3 (broker1, ID:Notebook-ssw-18022-1525334173989-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-18
+2018-05-03 17:01:29,754 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:56:12 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-18
+2018-05-03 17:01:29,782 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-18
+2018-05-03 17:01:31,147 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 17:01:31,191 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 17:01:31,437 | INFO  | Apache ActiveMQ 5.15.3 (broker2, ID:Notebook-ssw-18042-1525334491204-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:01:31,529 | INFO  | Listening for connections at: tcp://Notebook-ssw:61826?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 17:01:31,532 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 17:01:31,534 | INFO  | Apache ActiveMQ 5.15.3 (broker2, ID:Notebook-ssw-18042-1525334491204-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:01:31,537 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:01:32,052 | INFO  | Apache ActiveMQ 5.15.3 (broker2, ID:Notebook-ssw-18042-1525334491204-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,083 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,105 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\data\broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,108 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,112 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,114 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,178 | INFO  | Apache ActiveMQ 5.15.3 (broker2, ID:Notebook-ssw-18042-1525334491204-0:1) uptime 5 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,181 | INFO  | Apache ActiveMQ 5.15.3 (broker2, ID:Notebook-ssw-18042-1525334491204-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:01:32,520 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 17:01:32,859 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8862/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:01:32,860 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8862/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:01:32,950 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 17:01:33,221 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 17:01:33,454 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 17:01:33,551 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 16:56:19 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 17:01:33,567 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook

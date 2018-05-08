@@ -1,0 +1,377 @@
+2018-05-03 15:20:03,511 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@5f2108b5: startup date [Thu May 03 15:20:03 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:20:04,715 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:20:04,959 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:20:05,104 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17042-1525328404977-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:20:05,177 | ERROR | Failed to start Apache ActiveMQ (dynamic-broker2, ID:Notebook-ssw-17042-1525328404977-0:1) | org.apache.activemq.broker.BrokerService | main
+java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: tcp://0.0.0.0:61626?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind
+	at org.apache.activemq.util.IOExceptionSupport.create(IOExceptionSupport.java:28)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.registerConnectorMBean(BrokerService.java:2264)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.startTransportConnector(BrokerService.java:2744)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.startAllConnectors(BrokerService.java:2640)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.doStartBroker(BrokerService.java:771)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.startBroker(BrokerService.java:733)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:636)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)[activemq-spring-5.15.3.jar:5.15.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_151]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-4.2.jar:4.2]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.15.3.jar:5.15.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_151]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.15.3]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.15.3]
+2018-05-03 15:20:05,186 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17042-1525328404977-0:1) is shutting down | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:20:05,188 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:20:05,194 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:20:05,196 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-05-03 15:20:05,197 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-05-03 15:20:05,205 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | main
+2018-05-03 15:20:05,241 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17042-1525328404977-0:1) uptime 0.548 seconds | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:20:05,242 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17042-1525328404977-0:1) is shutdown | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:20:05,244 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@5f2108b5: startup date [Thu May 03 15:20:03 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:20:05,248 | WARN  | Exception thrown from LifecycleProcessor on context close | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: org.apache.activemq.xbean.XBeanBrokerFactory$1@5f2108b5: startup date [Thu May 03 15:20:03 KST 2018]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:427)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:999)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:958)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.activemq.hooks.SpringContextHook.run(SpringContextHook.java:30)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.stop(BrokerService.java:903)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerService.stop(XBeanBrokerService.java:122)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:642)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerService.afterPropertiesSet(XBeanBrokerService.java:73)[activemq-spring-5.15.3.jar:5.15.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_151]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1758)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1695)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)[spring-beans-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)[spring-context-4.3.9.RELEASE.jar:4.3.9.RELEASE]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:64)[xbean-spring-4.2.jar:4.2]
+	at org.apache.xbean.spring.context.ResourceXmlApplicationContext.<init>(ResourceXmlApplicationContext.java:52)[xbean-spring-4.2.jar:4.2]
+	at org.apache.activemq.xbean.XBeanBrokerFactory$1.<init>(XBeanBrokerFactory.java:104)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createApplicationContext(XBeanBrokerFactory.java:104)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.xbean.XBeanBrokerFactory.createBroker(XBeanBrokerFactory.java:67)[activemq-spring-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:71)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.broker.BrokerFactory.createBroker(BrokerFactory.java:54)[activemq-broker-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.StartCommand.runTask(StartCommand.java:87)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.ShellCommand.runTask(ShellCommand.java:154)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.AbstractCommand.execute(AbstractCommand.java:63)[activemq-console-5.15.3.jar:5.15.3]
+	at org.apache.activemq.console.command.ShellCommand.main(ShellCommand.java:104)[activemq-console-5.15.3.jar:5.15.3]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498)[:1.8.0_151]
+	at org.apache.activemq.console.Main.runTaskClass(Main.java:262)[activemq.jar:5.15.3]
+	at org.apache.activemq.console.Main.main(Main.java:115)[activemq.jar:5.15.3]
+2018-05-03 15:20:05,258 | WARN  | Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.apache.activemq.xbean.XBeanBrokerService#0' defined in class path resource [activemq.xml]: Invocation of init method failed; nested exception is java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: tcp://0.0.0.0:61626?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use: JVM_Bind | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:21:03,345 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:21:03 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:21:04,355 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:21:04,417 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 15:21:04,458 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:21:04,648 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17046-1525328464479-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:21:04,668 | INFO  | Listening for connections at: tcp://Notebook-ssw:61636?maximumConnections=1000&wireFormat.maxFrameSize=104857600 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:21:04,670 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:21:04,671 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17046-1525328464479-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:21:04,673 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:21:05,477 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 15:21:05,675 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8164/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:21:05,676 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8164/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:21:05,786 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 15:21:06,035 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 15:21:06,255 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 15:24:42,334 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17046-1525328464479-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-14
+2018-05-03 15:24:42,337 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-14
+2018-05-03 15:24:42,343 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-14
+2018-05-03 15:24:42,345 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-14
+2018-05-03 15:24:42,347 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-14
+2018-05-03 15:24:42,350 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-14
+2018-05-03 15:24:42,377 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17046-1525328464479-0:1) uptime 3 minutes | org.apache.activemq.broker.BrokerService | Thread-14
+2018-05-03 15:24:42,379 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17046-1525328464479-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-14
+2018-05-03 15:24:42,380 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:21:03 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-14
+2018-05-03 15:24:42,403 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-14
+2018-05-03 15:54:40,543 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:54:40 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 15:54:41,968 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:54:42,093 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 15:54:42,144 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 15:54:42,374 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17358-1525330482180-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:54:42,442 | INFO  | Listening for connections at: tcp://Notebook-ssw:61636 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 15:54:42,786 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 15:54:43,054 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] started | org.apache.activemq.network.NetworkConnector | main
+2018-05-03 15:54:43,055 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17358-1525330482180-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:54:43,057 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 15:54:43,289 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61626 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 15:54:43,299 | INFO  | Connector vm://dynamic-broker2 started | org.apache.activemq.broker.TransportConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 15:54:43,366 | INFO  | Network connection between vm://dynamic-broker2#0 and tcp://Notebook-ssw/192.168.0.113:61626@17360 (dynamic-broker1) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61626@17360, localBroker= vm://dynamic-broker2#0
+2018-05-03 15:54:43,858 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 15:54:44,163 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8164/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:54:44,165 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8164/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 15:54:44,265 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 15:54:44,514 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 15:54:44,730 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 15:56:26,587 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61646 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 15:56:26,666 | INFO  | Network connection between vm://dynamic-broker2#2 and tcp://Notebook-ssw/192.168.0.113:61646@17370 (dynamic-broker3) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61646@17370, localBroker= vm://dynamic-broker2#2
+2018-05-03 15:58:45,207 | WARN  | Transport Connection to: tcp://192.168.0.113:17359 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:17359@61636
+2018-05-03 15:58:45,231 | WARN  | Network connection between vm://dynamic-broker2#0 and tcp://Notebook-ssw/192.168.0.113:61626@17360 shutdown due to a remote error: {} | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ Transport: tcp://Notebook-ssw/192.168.0.113:61626@17360
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)[:1.8.0_151]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 15:58:45,247 | INFO  | dynamic-broker2 bridge to dynamic-broker1 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ BrokerService[dynamic-broker2] Task-8
+2018-05-03 15:59:57,676 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61626 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 15:59:57,749 | INFO  | Network connection between vm://dynamic-broker2#4 and tcp://Notebook-ssw/192.168.0.113:61626@17392 (dynamic-broker1) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61626@17392, localBroker= vm://dynamic-broker2#4
+2018-05-03 16:00:35,789 | WARN  | Transport Connection to: tcp://127.0.0.1:17380 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:17380@61636
+2018-05-03 16:01:25,905 | WARN  | Transport Connection to: tcp://127.0.0.1:17401 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:17401@61636
+2018-05-03 16:01:27,079 | WARN  | Transport Connection to: tcp://127.0.0.1:17403 failed: java.net.SocketException: Connection reset | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///127.0.0.1:17403@61636
+2018-05-03 16:02:56,543 | WARN  | Transport Connection to: tcp://192.168.0.113:17394 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:17394@61636
+2018-05-03 16:02:56,573 | WARN  | Network connection between vm://dynamic-broker2#4 and tcp://Notebook-ssw/192.168.0.113:61626@17392 shutdown due to a remote error: {} | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ Transport: tcp://Notebook-ssw/192.168.0.113:61626@17392
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)[:1.8.0_151]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 16:02:56,589 | INFO  | dynamic-broker2 bridge to dynamic-broker1 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ BrokerService[dynamic-broker2] Task-16
+2018-05-03 16:04:27,289 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61626 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 16:04:27,370 | INFO  | Network connection between vm://dynamic-broker2#6 and tcp://Notebook-ssw/192.168.0.113:61626@17461 (dynamic-broker1) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61626@17461, localBroker= vm://dynamic-broker2#6
+2018-05-03 16:11:08,616 | WARN  | Transport Connection to: tcp://192.168.0.113:17463 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:17463@61636
+2018-05-03 16:11:08,635 | WARN  | Network connection between vm://dynamic-broker2#6 and tcp://Notebook-ssw/192.168.0.113:61626@17461 shutdown due to a remote error: {} | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ Transport: tcp://Notebook-ssw/192.168.0.113:61626@17461
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)[:1.8.0_151]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 16:11:08,656 | INFO  | dynamic-broker2 bridge to dynamic-broker1 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ BrokerService[dynamic-broker2] Task-31
+2018-05-03 16:11:13,364 | WARN  | Transport Connection to: tcp://192.168.0.113:17372 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:17372@61636
+2018-05-03 16:11:13,378 | WARN  | Network connection between vm://dynamic-broker2#2 and tcp://Notebook-ssw/192.168.0.113:61646@17370 shutdown due to a remote error: {} | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ Transport: tcp://Notebook-ssw/192.168.0.113:61646@17370
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)[:1.8.0_151]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 16:11:13,383 | INFO  | Connector vm://dynamic-broker2 stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ BrokerService[dynamic-broker2] Task-31
+2018-05-03 16:11:13,384 | INFO  | dynamic-broker2 bridge to dynamic-broker3 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ BrokerService[dynamic-broker2] Task-31
+2018-05-03 16:11:14,690 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17358-1525330482180-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,692 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] stopped | org.apache.activemq.network.NetworkConnector | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,694 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,698 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,699 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,700 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,701 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,732 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17358-1525330482180-0:1) uptime 16 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,735 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-17358-1525330482180-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,738 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 15:54:40 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 16:11:14,756 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 17:09:00,254 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:09:00 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 17:09:01,385 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:09:01,451 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 17:09:01,484 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 17:09:01,679 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18098-1525334941548-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:09:01,743 | INFO  | Listening for connections at: tcp://Notebook-ssw:61636 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 17:09:01,952 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 17:09:02,211 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] started | org.apache.activemq.network.NetworkConnector | main
+2018-05-03 17:09:02,214 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18098-1525334941548-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:09:02,215 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:09:02,455 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61626 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:09:02,466 | INFO  | Connector vm://dynamic-broker2 started | org.apache.activemq.broker.TransportConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:09:02,532 | INFO  | Network connection between vm://dynamic-broker2#0 and tcp://Notebook-ssw/192.168.0.113:61626@18100 (dynamic-broker1) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61626@18100, localBroker= vm://dynamic-broker2#0
+2018-05-03 17:09:03,217 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 17:09:03,362 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8164/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:09:03,364 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8164/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:09:03,489 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 17:09:03,740 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 17:09:04,011 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 17:09:10,713 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61646 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:09:10,786 | INFO  | Network connection between vm://dynamic-broker2#2 and tcp://Notebook-ssw/192.168.0.113:61646@18109 (dynamic-broker3) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61646@18109, localBroker= vm://dynamic-broker2#2
+2018-05-03 17:17:59,513 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18098-1525334941548-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,523 | WARN  | Transport Connection to: vm://dynamic-broker2#0 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://dynamic-broker2#0) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,525 | INFO  | dynamic-broker2 bridge to dynamic-broker1 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,531 | WARN  | Transport Connection to: vm://dynamic-broker2#2 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://dynamic-broker2#2) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,532 | INFO  | Connector vm://dynamic-broker2 stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,536 | INFO  | dynamic-broker2 bridge to dynamic-broker3 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,541 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] stopped | org.apache.activemq.network.NetworkConnector | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,579 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,584 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,587 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,590 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,593 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,628 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18098-1525334941548-0:1) uptime 8 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,629 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18098-1525334941548-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,631 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:09:00 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 17:17:59,655 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 17:18:37,247 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:18:37 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 17:18:38,321 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:18:38,392 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 17:18:38,440 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 17:18:38,645 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18183-1525335518511-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:18:38,720 | INFO  | Listening for connections at: tcp://Notebook-ssw:61636 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 17:18:38,932 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 17:18:39,187 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] started | org.apache.activemq.network.NetworkConnector | main
+2018-05-03 17:18:39,190 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18183-1525335518511-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:18:39,192 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:18:39,441 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61626 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:18:39,457 | INFO  | Connector vm://dynamic-broker2 started | org.apache.activemq.broker.TransportConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:18:39,490 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61646 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:18:39,531 | INFO  | Network connection between vm://dynamic-broker2#0 and tcp://Notebook-ssw/192.168.0.113:61626@18188 (dynamic-broker1) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61626@18188, localBroker= vm://dynamic-broker2#0
+2018-05-03 17:18:39,535 | INFO  | Network connection between vm://dynamic-broker2#2 and tcp://Notebook-ssw/192.168.0.113:61646@18189 (dynamic-broker3) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61646@18189, localBroker= vm://dynamic-broker2#2
+2018-05-03 17:18:40,376 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 17:18:40,576 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8164/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:18:40,578 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8164/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:18:40,710 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 17:18:40,929 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 17:18:41,106 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 17:21:13,680 | WARN  | Transport Connection to: tcp://192.168.0.113:18187 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:18187@61636
+2018-05-03 17:21:13,698 | WARN  | Network connection between vm://dynamic-broker2#2 and tcp://Notebook-ssw/192.168.0.113:61646@18189 shutdown due to a remote error: {} | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ Transport: tcp://Notebook-ssw/192.168.0.113:61646@18189
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)[:1.8.0_151]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 17:21:13,714 | INFO  | dynamic-broker2 bridge to dynamic-broker3 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ BrokerService[dynamic-broker2] Task-7
+2018-05-03 17:21:27,512 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61646 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:21:27,589 | INFO  | Network connection between vm://dynamic-broker2#4 and tcp://Notebook-ssw/192.168.0.113:61646@18215 (dynamic-broker3) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61646@18215, localBroker= vm://dynamic-broker2#4
+2018-05-03 17:24:24,160 | WARN  | Transport Connection to: tcp://192.168.0.113:18217 failed: java.io.EOFException | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:18217@61636
+2018-05-03 17:24:24,175 | WARN  | Network connection between vm://dynamic-broker2#4 and tcp://Notebook-ssw/192.168.0.113:61646@18215 shutdown due to a remote error: {} | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ Transport: tcp://Notebook-ssw/192.168.0.113:61646@18215
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)[:1.8.0_151]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232)[activemq-client-5.15.3.jar:5.15.3]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215)[activemq-client-5.15.3.jar:5.15.3]
+	at java.lang.Thread.run(Thread.java:748)[:1.8.0_151]
+2018-05-03 17:24:24,210 | INFO  | dynamic-broker2 bridge to dynamic-broker3 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ BrokerService[dynamic-broker2] Task-15
+2018-05-03 17:24:25,947 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18183-1525335518511-0:1) is shutting down | org.apache.activemq.broker.BrokerService | Thread-19
+2018-05-03 17:24:25,955 | WARN  | Transport Connection to: vm://dynamic-broker2#0 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://dynamic-broker2#0) stopped. | org.apache.activemq.broker.TransportConnection.Transport | Thread-19
+2018-05-03 17:24:25,959 | INFO  | Connector vm://dynamic-broker2 stopped | org.apache.activemq.broker.TransportConnector | Thread-19
+2018-05-03 17:24:25,962 | INFO  | dynamic-broker2 bridge to dynamic-broker1 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | Thread-19
+2018-05-03 17:24:25,964 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] stopped | org.apache.activemq.network.NetworkConnector | Thread-19
+2018-05-03 17:24:25,969 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | Thread-19
+2018-05-03 17:24:25,975 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | Thread-19
+2018-05-03 17:24:25,977 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-19
+2018-05-03 17:24:25,979 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | Thread-19
+2018-05-03 17:24:25,981 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | Thread-19
+2018-05-03 17:24:26,013 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18183-1525335518511-0:1) uptime 5 minutes | org.apache.activemq.broker.BrokerService | Thread-19
+2018-05-03 17:24:26,016 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18183-1525335518511-0:1) is shutdown | org.apache.activemq.broker.BrokerService | Thread-19
+2018-05-03 17:24:26,018 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:18:37 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | Thread-19
+2018-05-03 17:24:26,047 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | Thread-19
+2018-05-03 17:25:27,013 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:25:27 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 17:25:29,378 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:25:29,525 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 17:25:29,602 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 17:25:29,843 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18251-1525335929700-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:25:29,939 | INFO  | Listening for connections at: tcp://Notebook-ssw:61636 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 17:25:30,232 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 17:25:30,751 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] started | org.apache.activemq.network.NetworkConnector | main
+2018-05-03 17:25:30,755 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18251-1525335929700-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:25:30,761 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:25:31,770 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61626 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:25:31,873 | INFO  | Connector vm://dynamic-broker2 started | org.apache.activemq.broker.TransportConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:25:31,928 | INFO  | Network connection between vm://dynamic-broker2#0 and tcp://Notebook-ssw/192.168.0.113:61626@18258 (dynamic-broker1) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61626@18258, localBroker= vm://dynamic-broker2#0
+2018-05-03 17:25:33,101 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 17:25:33,422 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8164/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:25:33,426 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8164/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:25:33,661 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 17:25:34,045 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 17:25:34,266 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 17:25:34,366 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61646 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:25:34,476 | INFO  | Network connection between vm://dynamic-broker2#2 and tcp://Notebook-ssw/192.168.0.113:61646@18260 (dynamic-broker3) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61646@18260, localBroker= vm://dynamic-broker2#2
+2018-05-03 17:26:12,374 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18251-1525335929700-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,382 | WARN  | Transport Connection to: vm://dynamic-broker2#0 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://dynamic-broker2#0) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,385 | INFO  | dynamic-broker2 bridge to dynamic-broker1 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,392 | WARN  | Transport Connection to: vm://dynamic-broker2#2 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://dynamic-broker2#2) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,400 | WARN  | Transport Connection to: tcp://192.168.0.113:18257 failed: java.io.IOException: Unexpected error occurred: org.apache.activemq.broker.BrokerStoppedException: Broker BrokerService[dynamic-broker2] is being stopped | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:18257@61636
+2018-05-03 17:26:12,402 | WARN  | Transport Connection to: tcp://192.168.0.113:18267 failed: java.io.IOException: Unexpected error occurred: org.apache.activemq.broker.BrokerStoppedException: Broker BrokerService[dynamic-broker2] is being stopped | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ Transport: tcp:///192.168.0.113:18267@61636
+2018-05-03 17:26:12,400 | INFO  | Connector vm://dynamic-broker2 stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,411 | INFO  | dynamic-broker2 bridge to dynamic-broker3 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,414 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] stopped | org.apache.activemq.network.NetworkConnector | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,428 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,432 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,434 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,435 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,436 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,464 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18251-1525335929700-0:1) uptime 43.122 seconds | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,467 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18251-1525335929700-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,468 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:25:27 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 17:26:12,494 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
+2018-05-03 17:26:19,106 | INFO  | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:26:19 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | main
+2018-05-03 17:26:20,136 | INFO  | Using Persistence Adapter: KahaDBPersistenceAdapter[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\kahadb] | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:26:20,209 | INFO  | KahaDB is version 6 | org.apache.activemq.store.kahadb.MessageDatabase | main
+2018-05-03 17:26:20,257 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] started | org.apache.activemq.store.kahadb.plist.PListStoreImpl | main
+2018-05-03 17:26:20,451 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18284-1525335980327-0:1) is starting | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:26:20,537 | INFO  | Listening for connections at: tcp://Notebook-ssw:61636 | org.apache.activemq.transport.TransportServerThreadSupport | main
+2018-05-03 17:26:20,768 | INFO  | Connector openwire started | org.apache.activemq.broker.TransportConnector | main
+2018-05-03 17:26:21,017 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] started | org.apache.activemq.network.NetworkConnector | main
+2018-05-03 17:26:21,019 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18284-1525335980327-0:1) started | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:26:21,021 | INFO  | For help or more information please see: http://activemq.apache.org | org.apache.activemq.broker.BrokerService | main
+2018-05-03 17:26:21,754 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /admin | main
+2018-05-03 17:26:21,775 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61626 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:26:21,786 | INFO  | Connector vm://dynamic-broker2 started | org.apache.activemq.broker.TransportConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:26:21,803 | INFO  | Establishing network connection from vm://dynamic-broker2 to tcp://Notebook-ssw:61646 | org.apache.activemq.network.DiscoveryNetworkConnector | Notifier-MulticastDiscoveryAgent-listener:DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2]
+2018-05-03 17:26:21,832 | INFO  | Network connection between vm://dynamic-broker2#2 and tcp://Notebook-ssw/192.168.0.113:61646@18288 (dynamic-broker3) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61646@18288, localBroker= vm://dynamic-broker2#2
+2018-05-03 17:26:21,834 | INFO  | Network connection between vm://dynamic-broker2#0 and tcp://Notebook-ssw/192.168.0.113:61626@18287 (dynamic-broker1) has been established. | org.apache.activemq.network.DemandForwardingBridgeSupport | triggerStartAsyncNetworkBridgeCreation: remoteBroker=tcp://Notebook-ssw/192.168.0.113:61626@18287, localBroker= vm://dynamic-broker2#0
+2018-05-03 17:26:22,164 | INFO  | ActiveMQ WebConsole available at http://0.0.0.0:8164/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:26:22,166 | INFO  | ActiveMQ Jolokia REST API available at http://0.0.0.0:8164/api/jolokia/ | org.apache.activemq.web.WebConsoleStarter | main
+2018-05-03 17:26:22,303 | INFO  | Initializing Spring FrameworkServlet 'dispatcher' | /admin | main
+2018-05-03 17:26:22,532 | INFO  | No Spring WebApplicationInitializer types detected on classpath | /api | main
+2018-05-03 17:26:22,727 | INFO  | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml | /api | main
+2018-05-03 17:45:18,175 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18284-1525335980327-0:1) is shutting down | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,184 | WARN  | Transport Connection to: vm://dynamic-broker2#0 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://dynamic-broker2#0) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,187 | INFO  | dynamic-broker2 bridge to dynamic-broker1 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,190 | WARN  | Transport Connection to: vm://dynamic-broker2#2 failed: org.apache.activemq.transport.TransportDisposedIOException: peer (vm://dynamic-broker2#2) stopped. | org.apache.activemq.broker.TransportConnection.Transport | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,192 | INFO  | Connector vm://dynamic-broker2 stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,197 | INFO  | dynamic-broker2 bridge to dynamic-broker3 stopped | org.apache.activemq.network.DemandForwardingBridgeSupport | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,199 | INFO  | Network Connector DiscoveryNetworkConnector:NC:BrokerService[dynamic-broker2] stopped | org.apache.activemq.network.NetworkConnector | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,217 | INFO  | Connector openwire stopped | org.apache.activemq.broker.TransportConnector | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,222 | INFO  | PListStore:[C:\Users\admin\Downloads\apache-activemq-5.15.3-bin(1)\apache-activemq-5.15.3\bin\cluster\dynamic-broker2\data\dynamic-broker2\tmp_storage] stopped | org.apache.activemq.store.kahadb.plist.PListStoreImpl | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,223 | INFO  | Stopping async queue tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,225 | INFO  | Stopping async topic tasks | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,232 | INFO  | Stopped KahaDB | org.apache.activemq.store.kahadb.KahaDBStore | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,292 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18284-1525335980327-0:1) uptime 18 minutes | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,294 | INFO  | Apache ActiveMQ 5.15.3 (dynamic-broker2, ID:Notebook-ssw-18284-1525335980327-0:1) is shutdown | org.apache.activemq.broker.BrokerService | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,296 | INFO  | Closing org.apache.activemq.xbean.XBeanBrokerFactory$1@e45f292: startup date [Thu May 03 17:26:19 KST 2018]; root of context hierarchy | org.apache.activemq.xbean.XBeanBrokerFactory$1 | ActiveMQ ShutdownHook
+2018-05-03 17:45:18,315 | INFO  | Destroying Spring FrameworkServlet 'dispatcher' | /admin | ActiveMQ ShutdownHook
